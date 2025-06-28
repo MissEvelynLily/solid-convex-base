@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",
-    "init": "bunx convex init --cmd-url-env-var-name VITE_CONVEX_URL",
+    "convex-init": "bunx convex dev --once --configure=new",
+    "convex": "bunx convex dev",
     "build": "bunx convex deploy --cmd-url-env-var-name VITE_CONVEX_URL --cmd 'vinxi build'",
     "start": "vinxi start"
   },
