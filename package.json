@@ -1,25 +1,31 @@
 {
-  "name": "solid-base",
+  "name": "solid-convex-base",
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",
-    "build": "vinxi build",
+    "init": "bunx convex init --cmd-url-env-var-name VITE_CONVEX_URL",
+    "build": "bunx convex deploy --cmd-url-env-var-name VITE_CONVEX_URL --cmd 'vinxi build'",
     "start": "vinxi start"
   },
   "dependencies": {
     "@solidjs/meta": "^0.29.4",
-    "@solidjs/router": "^0.14.7",
-    "@solidjs/start": "^1.0.8",
-    "@tailwindcss/vite": "^4.0.0-alpha.25",
-    "solid-js": "^1.9.1",
-    "tailwindcss": "^4.0.0-alpha.25",
-    "vinxi": "^0.4.3"
+    "@solidjs/router": "^0.15.3",
+    "@solidjs/start": "^1.1.5",
+    "@tailwindcss/vite": "^4.1.11",
+    "convex": "^1.25.0",
+    "solid-js": "^1.9.7",
+    "tailwindcss": "^4.1.11",
+    "vinxi": "^0.5.7"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "devDependencies": {
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.8"
+    "@biomejs/biome": "^2.0.6",
+    "@types/bun": "latest"
+  },
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }
