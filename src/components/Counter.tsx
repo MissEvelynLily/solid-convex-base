@@ -1,5 +1,5 @@
 import { api } from '@convex/_generated/api';
-import { createMutation, createQuery } from '~/convex.tsx';
+import { createMutation, createQuery } from '~/convex.ts';
 
 export default function Counter() {
   const count = createQuery<number>(api.counter.get);
